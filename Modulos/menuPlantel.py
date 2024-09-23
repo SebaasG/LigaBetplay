@@ -27,13 +27,13 @@ def menuPlantel(equipos:list):
         print("Error en la ejecucion del programa")
 
 
-
 def registrarJugador ():
+    listaJugadores = []
     nom = str(input("Ingrese el nombre del jugador: "))
     dorsal = int(input("Ingrese el dorsal del jugador: "))
     pos = str(input("Ingrese la posición del jugador: "))
-
-    
+    listaJugadores= [nom,dorsal,pos]
+    print(f"El jugador registrado es el siguiente {listaJugadores}")
 
 
 def validaEquipoDispo(equipos:list):
