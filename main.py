@@ -1,22 +1,27 @@
-import Modulos.menu as menuP
+import Modulos.menu as index
 import Modulos.menuEquipos as menuE
+import Modulos.menuPlantel as menuP
 
 if (__name__ == "__main__"):
-    
+    equipos  = []
+   
     activeMenu = True
     while activeMenu:
-        res =  menuP.crearMenu()
+        
+        res =  index.crearMenu()
+       
         print (res)
         if(res == 1):
             try:
-                result = menuE.pedirDatos()
-                menuE.regEquipo(result)
-                print("se ha registrado correctamente su equipo")
+               menuE.subMenuEquipo(equipos)
             except:
                 print("Ha ocurrido un error intentelo despues")
                 
         elif(res == 2):
-            pass
+            try:
+                menuP.menuPlantel()
+            except ValueError:
+                print("ocurrio un error")
         if(res == 3 ):
             pass
         elif(res == 4):
