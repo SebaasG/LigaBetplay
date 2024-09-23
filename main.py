@@ -19,7 +19,7 @@ if (__name__ == "__main__"):
                 
         elif(res == 2):
             try:
-                menuP.menuPlantel()
+                menuP.menuPlantel(equipos)
             except ValueError:
                 print("ocurrio un error")
         if(res == 3 ):

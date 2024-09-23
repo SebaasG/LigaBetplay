@@ -18,7 +18,7 @@ def subMenuEquipo(equipos:list):
                      input('Presione cualquier tecla para continuar...')
                      limpiarConsola()
                  else:
-                    print(f"Los siguientes son los equipos registrados:\n {equipos}")
+                    print(f"Los siguientes son los equipos registrados:\n {equipos[0][0]}")
                     input('Presione cualquier tecla para continuar...')
                     limpiarConsola()
 
@@ -41,7 +41,7 @@ def limpiarConsola():
     
 def pedirDatos ():
     
-    name = str(input("Ingrese el nombre de su equipo: "))
+    name = str(input("Ingrese el nombre de su equipo: ")).lower()
     pj = int(input(f"ingrese la cantidad de partidos jugados para {name}: "))
     pg = int(input(f"ingrese la cantidad de partidos ganados para {name}: "))
     pp = int(input(f"ingrese la cantidad de partidos perdidos para {name}: "))
