@@ -10,12 +10,11 @@ if (__name__ == "__main__"):
     while activeMenu:
         
         res =  index.crearMenu()
-       
         print (res)
         if(res == 1):
             try:
                menuE.subMenuEquipo(equipos)
-            except:
+            except ValueError:
                 print("Ha ocurrido un error intentelo despues")
                 
         elif(res == 2):
