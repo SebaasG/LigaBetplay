@@ -4,7 +4,7 @@ import Modulos.menuPlantel as menuP
 
 if (__name__ == "__main__"):
     equipos  = []
-    Jugadores = []
+    
    
     activeMenu = True
     while activeMenu:
