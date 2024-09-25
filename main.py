@@ -7,10 +7,9 @@ import Modulos.menuResul as menuRes
 if (__name__ == "__main__"):
     equipos  = []
     fechas = []
-   
     activeMenu = True
     while activeMenu:
-        
+        print(fechas)
         res =  index.crearMenu()
         print (res)
         if(res == 1):

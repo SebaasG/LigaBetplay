@@ -37,7 +37,6 @@ def programar(equipos: list):
     print(f"Ingrese el nombre del primer equipo, los disponibles son los siguientes: \n{equiposDispo}")
     nomEquipo = input(": ")
 
-    
     if nomEquipo not in equiposDispo:
         print("El equipo ingresado no está disponible.")
         return
@@ -54,4 +53,4 @@ def programar(equipos: list):
     date= str(input(": "))
     fecha =  [nomEquipo, nomEquipo2,date]
     encuentros.append(fecha)
-    return fecha
+    return encuentros
