@@ -2,10 +2,11 @@ import Modulos.menu as index
 import Modulos.menuEquipos as menuE
 import Modulos.menuPlantel as menuP
 import Modulos.menuPartidos as MenuPar
+import Modulos.menuResul as menuRes
 
 if (__name__ == "__main__"):
     equipos  = []
-    
+    fechas = []
    
     activeMenu = True
     while activeMenu:
@@ -24,9 +25,10 @@ if (__name__ == "__main__"):
             except ValueError:
                 print("ocurrio un error")
         if(res == 3 ):
-            MenuPar.menuPartidos(equipos)
+            resul = MenuPar.menuPartidos(equipos)
+            fechas.append(resul)
         elif(res == 4):
-            pass
+            menuRes.menuResul(fechas)
         elif(res == 5):
             activeMenu = False
             

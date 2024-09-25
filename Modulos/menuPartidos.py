@@ -1,5 +1,3 @@
-
-
 import Modulos.utils as ui
 
 encuentros = []
@@ -54,5 +52,6 @@ def programar(equipos: list):
     
     print(("Ingrese la fecha del encuentro"))
     date= str(input(": "))
-    fecha =  [f"{nomEquipo} VS {nomEquipo2} EN LA FECHA: {date}", ]
+    fecha =  [nomEquipo, nomEquipo2,date]
     encuentros.append(fecha)
+    return fecha
