@@ -9,8 +9,11 @@ def subMenuEquipo(equipos:list):
             print("1. Registrar equipo \n2. Ver Equipos \n3. Volver ")
             opc = int(input(": "))
             if (opc == 1):
+                ut.limpiarConsola()
                 regEquipo(equipos)
                 print("se ha registrado correctamente su equipo")
+                input("Presione cualquier tecla para continuar...")
+                ut.limpiarConsola()
             elif (opc == 2):
                  ut.limpiarConsola()
                  if(equipos == []):
@@ -18,7 +21,8 @@ def subMenuEquipo(equipos:list):
                      input('Presione cualquier tecla para continuar...')
                      ut.limpiarConsola()
                  else:
-                    print(f"Los siguientes son los equipos registrados:\n {equipos[0][0]}")
+                    equiposDispo = [equipo[0] for equipo in equipos]
+                    print(f"Los siguientes son los equipos registrados:\n {equiposDispo}")
                     input('Presione cualquier tecla para continuar...')
                     ut.limpiarConsola()
 
@@ -34,7 +38,6 @@ def subMenuEquipo(equipos:list):
 def regEquipo(eq:list):
     equipo = pedirDatos()
     eq.append(equipo)
-    print("Su equipo es: ", equipo)
 
     
 def pedirDatos ():
