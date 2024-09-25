@@ -1,6 +1,7 @@
 import Modulos.menu as index
 import Modulos.menuEquipos as menuE
 import Modulos.menuPlantel as menuP
+import Modulos.menuPartidos as MenuPar
 
 if (__name__ == "__main__"):
     equipos  = []
@@ -23,7 +24,7 @@ if (__name__ == "__main__"):
             except ValueError:
                 print("ocurrio un error")
         if(res == 3 ):
-            pass
+            MenuPar.menuPartidos(equipos)
         elif(res == 4):
             pass
         elif(res == 5):

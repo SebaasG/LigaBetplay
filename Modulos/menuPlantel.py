@@ -1,10 +1,6 @@
-from ast import List
-from curses import init_pair
-from email.policy import strict
-from imaplib import Int2AP
-from operator import truediv
+
 import os
-import Modulos.menuEquipos as me
+import Modulos.utils as me
 
 jugadores = []
 entrenadores = []

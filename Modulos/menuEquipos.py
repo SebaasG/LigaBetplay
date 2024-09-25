@@ -1,8 +1,8 @@
 
-import os
+import Modulos.utils as ut
 def subMenuEquipo(equipos:list):
     try:
-        limpiarConsola()
+        ut.limpiarConsola()
         isValid =True
         while isValid:
             
@@ -12,19 +12,19 @@ def subMenuEquipo(equipos:list):
                 regEquipo(equipos)
                 print("se ha registrado correctamente su equipo")
             elif (opc == 2):
-                 limpiarConsola()
+                 ut.limpiarConsola()
                  if(equipos == []):
                      print("Aun no se han registrado equipos")
                      input('Presione cualquier tecla para continuar...')
-                     limpiarConsola()
+                     ut.limpiarConsola()
                  else:
                     print(f"Los siguientes son los equipos registrados:\n {equipos[0][0]}")
                     input('Presione cualquier tecla para continuar...')
-                    limpiarConsola()
+                    ut.limpiarConsola()
 
             elif (opc == 3):
                 isValid = False  
-                limpiarConsola()
+                ut.limpiarConsola()
             else:
                 print("Opción no válida, intente nuevamente.")
             
@@ -36,17 +36,9 @@ def regEquipo(eq:list):
     eq.append(equipo)
     print("Su equipo es: ", equipo)
 
-def limpiarConsola():
-    os.system("cls" if os.name == "nt" else "clear")
     
 def pedirDatos ():
-    
+
     name = str(input("Ingrese el nombre de su equipo: ")).lower()
-    # pj = int(input(f"ingrese la cantidad de partidos jugados para {name}: "))
-    # pg = int(input(f"ingrese la cantidad de partidos ganados para {name}: "))
-    # pp = int(input(f"ingrese la cantidad de partidos perdidos para {name}: "))
-    # pe = int(input(f"ingrese la cantidad de partidos empatados para {name}: "))
-    # gf = int(input(f"ingrese la cantidad goles a favor para {name}: "))
-    # gc = int(input(f"ingrese la cantidad goles en contra para {name}: "))
     datos = [name, 0, 0,0,0,0,0]
     return datos
