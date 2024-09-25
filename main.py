@@ -7,6 +7,7 @@ import Modulos.menuResul as menuRes
 if (__name__ == "__main__"):
     equipos  = []
     fechas = []
+    encuentros =[]
     activeMenu = True
     while activeMenu:
         print(fechas)
@@ -27,7 +28,8 @@ if (__name__ == "__main__"):
             resul = MenuPar.menuPartidos(equipos)
             fechas.append(resul)
         elif(res == 4):
-            menuRes.menuResul(fechas)
+            res = menuRes.menuResul(fechas)
+            encuentros.append(res)
         elif(res == 5):
             activeMenu = False
             

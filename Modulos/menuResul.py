@@ -1,12 +1,12 @@
 import Modulos.utils as ut
 
-tabla = []
+
 def menuResul(fechas:list):
     try:
         isValid = True
         while isValid:
             print("1. Registrar resultados\n2. Ver Registrar\n3.Salir")
-            opc = str(input(": "))
+            opc = int(input(": "))
             if(opc ==1):
                 regiResul(fechas)
             elif(opc == 2):
@@ -22,6 +22,15 @@ def menuResul(fechas:list):
     
     
 def regiResul(fechas):
-    print(fechas)
-    print("A que encuentro le quiere registrar el resultado: ")
+    
+    print("¿A qué encuentro le quiere registrar el resultado?")
+    for index, fecha in enumerate(fechas):
+        print(f"{index + 1}. {fecha}")
+    opc = int(input(": "))
+    
+    print(len(fechas))
+
+def resultado(numFecha):
+
+    int(print("Cuantos goles "))
     
